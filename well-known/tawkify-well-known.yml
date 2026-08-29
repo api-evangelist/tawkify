@@ -1,0 +1,58 @@
+generated: '2026-08-29'
+method: probed
+source: live GET probes of /.well-known/* on every Tawkify host
+note: >-
+  Every well-known path was probed on both Tawkify hosts and every one returned 404. Both
+  hosts are Next.js applications that answer unmatched routes with an HTML error shell, so
+  no path returned a document of any kind. No WellKnown or SecurityTxt pointer is emitted
+  in apis.yml: this file records a verified ABSENCE, not a served surface.
+hosts:
+- host: tawkify.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: app.tawkify.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null

@@ -1,0 +1,40 @@
+generated: '2026-08-29'
+method: searched
+source: https://tawkify.com/faq
+docs: https://tawkify.com/faq
+note: >-
+  Tawkify publishes NO price list. The company sells matchmaking packages, but every price is
+  quoted privately: a prospect completes the free onboarding assessment, is screened, and is
+  then booked onto a call with a "client experience specialist" who recommends a package. The
+  FAQ states only that "pricing depends on the desired features you're looking for and the
+  number of matches you'd like included", and that trial engagements of 3 or 6 hand-selected
+  matches exist alongside unpriced "Premier" packages available on request. No /pricing page
+  exists on the site (HTTP 404) and no pricing appears in the sitemap, so plan_count is 0 by
+  measurement, not by omission. Structured tiers below are deliberately empty rather than
+  reconstructed from third-party review sites, which quote widely varying figures Tawkify
+  does not itself publish.
+pricing_model: quote-only
+publicly_priced: false
+plan_count: 0
+plans: []
+packaging:
+  unit: matches
+  described_offers:
+  - name: Trial engagement
+    price: null
+    currency: USD
+    note: 3 or 6 hand-selected matches, described in the FAQ without a published price.
+  - name: Premier packages
+    price: null
+    currency: USD
+    note: Referenced in the FAQ as available on request; no price, term or inclusions published.
+evidence:
+- url: https://tawkify.com/faq
+  status: 200
+  finding: Describes packages and trial match counts; states pricing depends on features and match count.
+- url: https://tawkify.com/pricing
+  status: 404
+  finding: No pricing page is served.
+- url: https://tawkify.com/sitemap.xml
+  status: 200
+  finding: 94 URLs, none of which is a pricing or plans page.

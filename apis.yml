@@ -1,17 +1,30 @@
 aid: tawkify
 name: Tawkify
-description: 'Tawkify is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Tawkify is a US personalized matchmaking service that pairs paying clients with a trained
+  human matchmaker rather than offering a self-service dating app. Founded in 2012 and
+  headquartered in San Francisco, the company screens and hand-selects introductions from a
+  network of several million singles, arranges curated first dates, and collects structured
+  feedback after each match. Packages are sold by consultation through a client experience
+  specialist instead of a published price list. Tawkify operates a consumer web application at
+  app.tawkify.com for onboarding, profiles and match feedback, but publishes no public API,
+  developer portal, SDK or machine-readable contract of any kind; its engineering surface is
+  entirely internal.
 url: https://raw.githubusercontent.com/api-evangelist/tawkify/refs/heads/main/apis.yml
+image: https://tawkify.com/api/og
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-29'
 modified: '2026-08-29'
 tags:
 - Company
+- Matchmaking
+- Online Dating
+- Relationships
+- Consumer Services
+- Personal Services
+- Concierge
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +32,59 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/tawkify-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://tawkify.com/
+- type: Support
+  url: https://tawkify.com/contact
+- type: HelpCenter
+  url: https://tawkify.com/faq
+- type: GettingStarted
+  url: https://tawkify.com/how-it-works
+- type: Blog
+  url: https://tawkify.com/blog
+- type: SignUp
+  url: https://app.tawkify.com/onboarding
+- type: Login
+  url: https://app.tawkify.com/login
+- type: TermsOfService
+  url: https://app.tawkify.com/agreement/termsofuse
+- type: PrivacyPolicy
+  url: https://app.tawkify.com/agreement/privacypolicy
+- type: GitHubOrganization
+  url: https://github.com/tawkify
+- type: Press
+  url: https://tawkify.com/press
+- type: Plans
+  url: plans/tawkify-plans-pricing.yml
+- type: LLMsTxt
+  url: llms/tawkify-llms.txt
+x-enrichment:
+  date: '2026-08-29'
+  status: minimal
+  artifacts_added: 4
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Tawkify sells human matchmaking as an end-user consumer service and ships no developer
+    surface at all - api.tawkify.com, developer.tawkify.com and docs.tawkify.com do not
+    resolve, the marketing site's 94-URL sitemap contains no developer or reference page,
+    and the only customer application (app.tawkify.com) is a robots-disallowed private
+    Next.js app that 404s every spec, GraphQL, MCP, agent-card and well-known path probed.
+  evidence:
+  - url: https://api.tawkify.com/
+    status: 0
+  - url: https://developer.tawkify.com/
+    status: 0
+  - url: https://tawkify.com/openapi.json
+    status: 404
+  - url: https://app.tawkify.com/graphql
+    status: 404
+  - url: https://app.tawkify.com/.well-known/agent-card.json
+    status: 404
+  - url: https://app.tawkify.com/robots.txt
+    status: 200
+  checked: '2026-08-29'
