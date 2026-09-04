@@ -11,6 +11,18 @@ description: >-
   developer portal, SDK or machine-readable contract of any kind; its engineering surface is
   entirely internal.
 url: https://raw.githubusercontent.com/api-evangelist/tawkify/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - security
+  generated: '2026-09-02'
+  method: derived
 image: https://tawkify.com/api/og
 x-type: company
 x-source: harvest:secondary-market
